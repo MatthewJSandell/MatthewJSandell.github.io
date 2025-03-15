@@ -1,12 +1,50 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <!-- Add any other meta tags you need here -->
 </head>
 <body>
-    <h1>My Website is Working!</h1>
-    <p>If you see this message, your site is up and running.</p>
+  <header>
+    <div class="container">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Welcome to My Site</h2>
+      <p>This is a minimal site powered by GitHub Pages and Jekyll!</p>
+      
+      <!-- Example of adding a project list -->
+      <section>
+        <h3>My Projects</h3>
+        <ul>
+          <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
+          <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
+        </ul>
+      </section>
+      
+      <!-- About Section -->
+      <section>
+        <h3>About Me</h3>
+        <p>Hi, I'm a data analytics enthusiast working on various projects. Feel free to check out my work and reach out!</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
